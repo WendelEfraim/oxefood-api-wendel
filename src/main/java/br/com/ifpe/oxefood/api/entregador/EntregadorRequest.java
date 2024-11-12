@@ -1,10 +1,10 @@
-package br.com.ifpe.oxefood.api.cliente;
+package br.com.ifpe.oxefood.api.entregador;
 
 import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import br.com.ifpe.oxefood.modelo.cliente.Cliente;
+import br.com.ifpe.oxefood.modelo.entregador.Entregador;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClienteRequest {
+public class EntregadorRequest {
 
    private String nome;
 
@@ -27,9 +27,9 @@ public class ClienteRequest {
 
    private String foneFixo;
 
-   public Cliente build() {
+   public Entregador build() {
 
-       return Cliente.builder()
+       return Entregador.builder()
            .nome(nome)
            .dataNascimento(dataNascimento)
            .cpf(cpf)
