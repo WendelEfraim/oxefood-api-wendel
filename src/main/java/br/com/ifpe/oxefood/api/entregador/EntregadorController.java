@@ -23,7 +23,7 @@ public class EntregadorController {
    @PostMapping
    public ResponseEntity<Entregador> save(@RequestBody EntregadorRequest request) {
 
-    Entregador cliente = entregadorService.save(request.build());
-       return new ResponseEntity<Entregador>(cliente, HttpStatus.CREATED);
+    Entregador entregador = entregadorService.save(request.build());
+       return new ResponseEntity<Entregador>(entregador, HttpStatus.CREATED);
    }
 }

@@ -7,19 +7,20 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
-import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.Version;
+import jakarta.persistence.EntityListeners;
+
 import lombok.Getter;
 import lombok.Setter;
 
-@SuppressWarnings("serial")
+
 @Getter
 @Setter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public abstract class EntidadeAuditavel extends EntidadeNegocio {
-  
+    
    @JsonIgnore
    @Version
    private Long versao;
@@ -39,5 +40,6 @@ public abstract class EntidadeAuditavel extends EntidadeNegocio {
    @JsonIgnore
    @Column
    private Long ultimaModificacaoPor; // Id do usuário que fez a última alteração
+
 
 }
