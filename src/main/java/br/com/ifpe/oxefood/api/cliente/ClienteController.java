@@ -22,14 +22,14 @@ import java.util.List;
 @CrossOrigin
 public class ClienteController {
 
-   @Autowired
-   private ClienteService clienteService;
+    @Autowired
+    private ClienteService clienteService;
 
-   @PostMapping
-   public ResponseEntity<Cliente> save(@RequestBody ClienteRequest request) {
-       Cliente cliente = clienteService.save(request.build());
-       return new ResponseEntity<Cliente>(cliente, HttpStatus.CREATED);
-   }
+    @PostMapping
+    public ResponseEntity<Cliente> save(@RequestBody ClienteRequest request) {
+        Cliente cliente = clienteService.save(request.build());
+        return new ResponseEntity<Cliente>(cliente, HttpStatus.CREATED);
+    }
 
     @GetMapping
     public List<Cliente> listarTodos() {
@@ -47,7 +47,7 @@ public class ClienteController {
         clienteService.update(id, request.build());
         return ResponseEntity.ok().build();
     }
-    
+
 @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
 
