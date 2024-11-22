@@ -11,3 +11,6 @@ services:
        - 5439:5432
      volumes:
        - ./postgres-data:/bitnami/postgresql/data
+
+# codigo para rodar em qlqr maquina
+# docker-compose up -d
