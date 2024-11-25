@@ -21,7 +21,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cliente extends EntidadeAuditavel  {
-  
+
    @Column
    private String nome;
 
