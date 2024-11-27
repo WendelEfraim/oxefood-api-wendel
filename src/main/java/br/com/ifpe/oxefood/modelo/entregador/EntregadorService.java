@@ -31,14 +31,14 @@ public List<Entregador> listarTodos() {
     }
 
 @Transactional
-public void update(Long id, Entregador clienteAlterado) {
+public void update(Long id, Entregador entregadorAlterado) {
 
     Entregador entregador = repository.findById(id).get();
-    entregador.setNome(clienteAlterado.getNome());
-    entregador.setDataNascimento(clienteAlterado.getDataNascimento());
-    entregador.setCpf(clienteAlterado.getCpf());
-    entregador.setFoneCelular(clienteAlterado.getFoneCelular());
-    entregador.setFoneFixo(clienteAlterado.getFoneFixo());
+    entregador.setNome(entregadorAlterado.getNome());
+    entregador.setDataNascimento(entregadorAlterado.getDataNascimento());
+    entregador.setCpf(entregadorAlterado.getCpf());
+    entregador.setFoneCelular(entregadorAlterado.getFoneCelular());
+    entregador.setFoneFixo(entregadorAlterado.getFoneFixo());
     
     repository.save(entregador);
 }
