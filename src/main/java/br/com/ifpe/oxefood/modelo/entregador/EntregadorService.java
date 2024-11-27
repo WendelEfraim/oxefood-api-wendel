@@ -39,6 +39,15 @@ public void update(Long id, Entregador entregadorAlterado) {
     entregador.setCpf(entregadorAlterado.getCpf());
     entregador.setFoneCelular(entregadorAlterado.getFoneCelular());
     entregador.setFoneFixo(entregadorAlterado.getFoneFixo());
+    entregador.setEntregasRealizadas(entregadorAlterado.getEntregasRealizadas());
+    entregador.setValorFrete(entregadorAlterado.getValorFrete());
+    entregador.setRua(entregadorAlterado.getRua());
+    entregador.setNumeroEndereco(entregadorAlterado.getNumeroEndereco());
+    entregador.setBairro(entregadorAlterado.getBairro());
+    entregador.setCidade(entregadorAlterado.getCidade());
+    entregador.setCep(entregadorAlterado.getCep());
+    entregador.setUf(entregadorAlterado.getUf());
+    entregador.setComplemento(entregadorAlterado.getComplemento());
     
     repository.save(entregador);
 }
