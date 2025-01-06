@@ -22,7 +22,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @AllArgsConstructor
 @NoArgsConstructor
 
-// teste
 public class EnderecoCliente extends EntidadeAuditavel {
 
    @JsonIgnore
